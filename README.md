@@ -1,8 +1,8 @@
-# FashionHub
+## FashionHub
 
 A modern and responsive fashion e-commerce website built using HTML, CSS, and JavaScript. FashionHub showcases clothing collections with a clean user interface and responsive design.
 
-# Features
+## Features
 
 - Responsive design
 - Modern homepage
@@ -12,12 +12,12 @@ A modern and responsive fashion e-commerce website built using HTML, CSS, and Ja
 - Clean and user-friendly interface
 - Mobile-friendly layout
 
-# 🌐 Live Demo
+## 🌐 Live Demo
 
 https://iqrayaqoob1.github.io/Fashionhub/
 
 
-# Technologies Used
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -25,7 +25,7 @@ https://iqrayaqoob1.github.io/Fashionhub/
 - Git
 - GitHub Pages
 
-# 📸 Screenshots
+## 📸 Screenshots
 
 (Add screenshots here later)
 
