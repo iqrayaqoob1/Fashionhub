@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Product Details | FashionHub</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Product Details -->
+    <section class="product-page">
+      <div class="container">
+        <div id="productDetail">
+          <div class="loading">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+
+            <p>Loading Product...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Load Header -->
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+
+          // Update cart count after header loads
+          if (typeof updateCartCount === "function") {
+            updateCartCount();
+          }
+        });
+
+      // Load Footer
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+    <script src="app.js"></script>
+
+    <script>
+      window.onload = function () {
+        if (typeof loadProductDetails === "function") {
+          loadProductDetails();
+        }
+
+        if (typeof updateCartCount === "function") {
+          updateCartCount();
+        }
+      };
+    </script>
+  </body>
+</html>

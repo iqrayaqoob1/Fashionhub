@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart | FashionHub</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Cart Section -->
+    <section class="cart-page">
+      <div class="container">
+        <h1 class="cart-title">Shopping Cart</h1>
+
+        <div class="cart-layout">
+          <!-- Cart Items -->
+          <div id="cartItems">
+            <div class="empty-cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+
+              <h2>Your cart is empty</h2>
+
+              <p>Add some products to continue shopping.</p>
+
+              <a href="index.html" class="continue-btn"> Continue Shopping </a>
+            </div>
+          </div>
+
+          <!-- Summary -->
+          <div class="cart-summary">
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+              <span>Items</span>
+              <span id="cartCount">0</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Total</span>
+              <span id="cartTotal">$0.00</span>
+            </div>
+
+            <button
+              class="checkout-btn"
+              onclick="window.location.href = 'checkout.html'"
+            >
+              Proceed to Checkout
+            </button>
+
+            <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+
+            <a href="index.html" class="continue-btn"> Continue Shopping </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Load Header -->
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+    <script src="app.js"></script>
+
+    <script>
+      // Load cart automatically
+      window.onload = function () {
+        if (typeof displayCart === "function") {
+          displayCart();
+        }
+
+        if (typeof updateCartCount === "function") {
+          updateCartCount();
+        }
+      };
+    </script>
+  </body>
+</html>
