@@ -33,7 +33,7 @@ https://iqrayaqoob1.github.io/Fashionhub/
 
 ## 📸 Screenshots
 
-(Add screenshots here later)
+![FashionHub Preview](preview.png)
 
 
 
